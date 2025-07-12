@@ -551,7 +551,7 @@ async def why(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     try:
         # Создаем Application
-        application = Application.builder().token("8158309846:AAEmFzC3vLLkb027O-SiGH0xQkOoJc59qpc").build()
+        application = Application.builder().token("ТОКЕН").build()
 
         # Обработчик выбора времени и часового пояса для эко-советов
         eco_conv_handler = ConversationHandler(
