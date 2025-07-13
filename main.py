@@ -260,7 +260,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "🍵 Привет. Я EcoHelper🕊️, твой персональный эко-помощник. "
         "Тут ты можешь узнать о глобальном потеплении и решении этой проблемы. "
         "Каждый день я буду присылать тебе простые советы. "
-        "Хочешь узнать больше о глобальном потеплении? нажми команду /global_warming\n\n"
+        "Хочешь узнать больше о глобальном потеплении? нажми команду /globalwarming\n\n"
         "Также я могу помочь с напоминаниями - используй /reminder"
     )
 
@@ -520,7 +520,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 # ===== ИНФОРМАЦИОННЫЕ КОМАНДЫ =====
-async def global_warming(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def globalwarming(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "🌍 Глобальное потепление — повышение средней температуры климатической системы Земли. "
         "Узнать больше: /what"
@@ -582,7 +582,7 @@ def main():
 
         # Регистрация обработчиков команд
         application.add_handler(CommandHandler("start", start))
-        application.add_handler(CommandHandler("globalwarming", global_warming))
+        application.add_handler(CommandHandler("globalwarming", globalwarming))
         application.add_handler(CommandHandler("what", what))
         application.add_handler(CommandHandler("why", why))
         application.add_handler(eco_conv_handler)
